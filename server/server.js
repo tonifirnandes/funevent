@@ -28,14 +28,14 @@ boot(app, __dirname, function(err) {
   // do db-auto-update-here
 
   const MODELS = [
-    // 'UserModel',
-    // 'AccessToken',
-    // 'ACL',
-    // 'RoleMapping',
-    // 'Role',
-    // 'Event',
-    // 'Place',
-    // 'Schedule',
+    'UserModel',
+    'AccessToken',
+    'ACL',
+    'RoleMapping',
+    'Role',
+    'Event',
+    'Place',
+    'Schedule',
     'Visitor',
   ];
 
