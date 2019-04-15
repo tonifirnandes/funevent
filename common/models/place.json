@@ -1,0 +1,42 @@
+{
+  "name": "Place",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "mark": {
+      "type": "string"
+    },
+    "coordinates": {
+      "type": "geopoint"
+    },
+    "schedule_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "schedule": {
+      "type": "belongsTo",
+      "model": "Schedule",
+      "foreignKey": "schedule_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

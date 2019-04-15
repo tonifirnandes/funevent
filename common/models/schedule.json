@@ -1,0 +1,41 @@
+{
+  "name": "Schedule",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "event_id": {
+      "type": "number",
+      "required": true
+    },
+    "place_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "events": {
+      "type": "hasOne",
+      "model": "Event",
+      "foreignKey": "schedule_id"
+    },
+    "places": {
+      "type": "hasOne",
+      "model": "Place",
+      "foreignKey": "schedule_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

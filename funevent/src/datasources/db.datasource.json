@@ -1,0 +1,10 @@
+{
+  "name": "db",
+  "connector": "postgresql",
+  "url": "",
+  "host": "localhost",
+  "port": 11432,
+  "user": "postgres",
+  "password": "",
+  "database": "funevent"
+}

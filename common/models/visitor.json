@@ -1,0 +1,43 @@
+{
+  "name": "Visitor",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "rating": {
+      "type": "number"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "schedule_id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "userModels": {
+      "type": "belongsTo",
+      "model": "UserModel",
+      "foreignKey": "user_id"
+    },
+    "schedules": {
+      "type": "belongsTo",
+      "model": "Schedule",
+      "foreignKey": "schedule_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
