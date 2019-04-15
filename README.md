@@ -80,7 +80,7 @@ simply just set public false of user in model-config.json
     "public": false
   },
 
-#-missing data still in memory
+# -missing data still in memory
 lets setup new datasource, attached our model connected to our database.
 1. remove prev datasource in datasources.json (so we can still use the datasource name db, and no need ot modify our model-config.json where datasource for every model)
 "db": {
@@ -117,7 +117,7 @@ const MODELS = ['UserModel', 'AccessToken', 'ACL', 'RoleMapping', 'Role','Event'
   }
 
 # missing no relations between model, ex: we cannot find event by place, etc
-- dont forget to turn off model schema
+- dont forget to turn off autoupdate model schema
 - add relations of all model (lb relation), if the relation not working we cannot find the desired data and path in rest-api
 in event.json
  "schedules": {
@@ -138,5 +138,5 @@ ALTER TABLE public.schedule ADD CONSTRAINT schedule_event_fk FOREIGN KEY (event_
 ALTER TABLE public."event" ADD CONSTRAINT event_un UNIQUE (schedule_id);
 ALTER TABLE public.place ADD CONSTRAINT place_un UNIQUE (schedule_id);
 
-
+For complete reference sql, see file migration.sql
 
